@@ -6,7 +6,13 @@ import javax.inject.Inject
 class Car @Inject constructor(val wheels: Wheels, val engine: Engine) {
     private val Any.TAG: String get() = this::class.java.simpleName
 
+    @Inject
+    fun enableRemote(remote: Remote) {
+        remote.setListener(this)
+    }
+
     fun drive() {
         Log.d(TAG, "driving.....")
     }
+
 }

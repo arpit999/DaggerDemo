@@ -3,7 +3,9 @@ package com.hometech.daggerdemo
 import dagger.Component
 
 @Component
-interface CarComponents {
+interface CarComponent {
 
-    fun getCar():Car
+    fun getCar(): Car
+
+    fun inject(mainActivity: MainActivity)
 }

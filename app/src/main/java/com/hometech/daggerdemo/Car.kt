@@ -1,18 +1,10 @@
 package com.hometech.daggerdemo
 
-import android.util.Log
 import javax.inject.Inject
 
-class Car @Inject constructor(val wheels: Wheels, val engine: Engine) {
-    private val Any.TAG: String get() = this::class.java.simpleName
-
-    @Inject
-    fun enableRemote(remote: Remote) {
-        remote.setListener(this)
-    }
+class Car @Inject constructor(wheel: Wheel, engine: Engine) {
 
     fun drive() {
-        Log.d(TAG, "driving.....")
+        println("Driving Car.....")
     }
-
 }

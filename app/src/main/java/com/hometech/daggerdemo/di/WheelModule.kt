@@ -1,8 +1,8 @@
 package com.hometech.daggerdemo.di
 
-import com.hometech.daggerdemo.Rims
-import com.hometech.daggerdemo.Tires
-import com.hometech.daggerdemo.Wheel
+import com.hometech.daggerdemo.car.Rims
+import com.hometech.daggerdemo.car.Tires
+import com.hometech.daggerdemo.car.Wheel
 import dagger.Module
 import dagger.Provides
 
@@ -22,7 +22,7 @@ class WheelModule {
         return tires
     }
 
-    //Above two method can create Rims & Tires now we can use those to Create our Wheel objec.
+    //Above two method can create Rims & Tires now we can use those to Create our Wheel object.
     @Provides
     fun provideWheels(rims: Rims, tires: Tires): Wheel {
         return Wheel(rims, tires)

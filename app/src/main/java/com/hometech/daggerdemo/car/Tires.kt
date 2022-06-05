@@ -1,4 +1,4 @@
-package com.hometech.daggerdemo
+package com.hometech.daggerdemo.car
 
 class Tires {
 
